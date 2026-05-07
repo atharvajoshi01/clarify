@@ -5,10 +5,12 @@ import { SYSTEM_PROMPT } from "@/lib/prompts";
 export const maxDuration = 60;
 
 const FALLBACK_MODELS = [
-  "deepseek/deepseek-chat-v3.1:free",
+  "openai/gpt-oss-120b:free",
+  "qwen/qwen3-next-80b-a3b-instruct:free",
+  "z-ai/glm-4.5-air:free",
+  "nousresearch/hermes-3-llama-3.1-405b:free",
   "meta-llama/llama-3.3-70b-instruct:free",
-  "google/gemini-2.0-flash-exp:free",
-  "qwen/qwen-2.5-72b-instruct:free",
+  "nvidia/nemotron-3-super-120b-a12b:free",
 ];
 
 const PRIMARY_MODEL =
