@@ -19,7 +19,7 @@ const EXAMPLE_BRIEFS = [
 
 export default function Home() {
   const [input, setInput] = useState("");
-  const { messages, sendMessage, status } = useChat({
+  const { messages, sendMessage, status, error } = useChat({
     transport: new DefaultChatTransport({ api: "/api/clarify" }),
   });
 
@@ -126,6 +126,14 @@ export default function Home() {
               </Card>
             </div>
           ))}
+          {error && (
+            <Card className="p-4 border-destructive bg-destructive/10 text-sm">
+              <div className="font-semibold text-destructive mb-1">Error</div>
+              <pre className="whitespace-pre-wrap text-xs text-destructive/90">
+                {error.message || String(error)}
+              </pre>
+            </Card>
+          )}
         </div>
       </ScrollArea>
 
