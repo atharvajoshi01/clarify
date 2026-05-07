@@ -8,13 +8,13 @@ The agent refuses to invent details. If the brief is ambiguous on scope, users, 
 
 - Next.js 16 (App Router) + React 19
 - TypeScript, Tailwind v4, shadcn/ui
-- Vercel AI SDK + Vercel AI Gateway (provider-agnostic model routing)
+- Vercel AI SDK with OpenRouter (free model, swap via `CLARIFY_MODEL` env)
 
 ## Local development
 
 ```bash
 cp .env.example .env.local
-# fill in AI_GATEWAY_API_KEY
+# fill in OPENROUTER_API_KEY
 npm install
 npm run dev
 ```
@@ -23,7 +23,7 @@ Open `http://localhost:3000`.
 
 ## Deploy
 
-Deploys to Vercel as a standard Next.js app. Set `AI_GATEWAY_API_KEY` in the Vercel project env vars.
+Deploys to Vercel as a standard Next.js app. Set `OPENROUTER_API_KEY` in the Vercel project env vars. Optionally override the default model with `CLARIFY_MODEL`.
 
 ## Status
 
